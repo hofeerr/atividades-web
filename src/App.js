@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import MeusDados from "./components/atividade00/MeusDados";
+import MeusDados02 from './components/atividade00/MeusDados02';
+import TimeComponent from './components/atividade00/Temperatura';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+  
+  //descontrução para obter dados de props
+  const Dados = {
+    nomes: 'by Mariana & Luigy',
+    curso: 'Engenharia de Software - Campus Quixadá',
+    universidade: 'Universidade Federal do Ceará - UFC'
+  }
+
+  //return ex. 1
+  /*return (
+    <div>
+      <header className='header'>
+        <img src="https://i.pinimg.com/originals/ba/9f/9f/ba9f9f53e830f093868a867961caaf93.png" alt="logoUFC" width="159" height="211,5"></img>
       </header>
+      <section className='body'>
+        <MeusDados />
+      </section>
+    </div>
+  );*/
+  
+  //return ex. 2
+  return (
+    <div>
+      <header className='header'>
+        <img src="https://i.pinimg.com/originals/ba/9f/9f/ba9f9f53e830f093868a867961caaf93.png" alt="logoUFC" width="159" height="211,5"></img>
+      </header>
+      <section className='body'>
+        <MeusDados02 {...Dados} />
+      </section>
+      <center class>
+        <TimeComponent temp = {320.15}/>
+      </center>
+        
     </div>
   );
 }
