@@ -1,11 +1,13 @@
 *{
-    border: 0;
-    margin: 0;
+    border: 2;
+    margin: 2;
+    font-family:  Arial;
+
+
 }
 
 .body {
-    font-family:  Arial;
-    text-align: center;
+    /*text-align: center;*/
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -19,3 +21,24 @@
     padding-top: 20px;
     margin: 0px;
 }
+
+.subHeader {
+    padding: 0px;
+    margin: 0px;
+}
+
+.question {
+    background-color: #ffff;
+    padding: 10px;
+    border-radius: 10px;
+    content: center;
+    align-content: center;
+    align-items: center;
+    justify-content: 'center',
+    /*border: 1px solid #000;*/
+}
+
+/** img {
+    border-radius: 10px;
+}*/
+
