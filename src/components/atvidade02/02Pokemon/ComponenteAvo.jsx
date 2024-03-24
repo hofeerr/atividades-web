@@ -10,7 +10,7 @@ const ComponenteAvo = () => {
     return (
         <idContext.Provider value={id}>
             <div>
-                <h4>Pokemon Avo!</h4>
+                <h4>Pokemon Vovô!</h4>
                 <img
                     src = { url + id +".png" }
                     alt = "Pokemon"

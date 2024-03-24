@@ -26,15 +26,15 @@ function App() {
       </p>
         
       <p className='questionWhite'>
-        <h1 className='subHeader'>Questão 02 & Questão 3</h1>
-        <h4 className='subHeader'> "eu escolho você!" a evolução da espécie </h4>
+        <h1 className='subHeader'>Questão 02 </h1>
+        <h4 className='subHeader'> "eu escolho você!" versão apenas contexto </h4>
         <hr />
         <ComponenteAvo />
       </p>
 
       <p className='questionWhite'>
-        <h1 className='subHeader'>Questão 02 & Questão 3</h1>
-        <h4 className='subHeader'> "eu escolho você!" a evolução da espécie </h4>
+        <h1 className='subHeader'>Questão 3</h1>
+        <h4 className='subHeader'> "eu escolho você!" versão usando contador e buttom </h4>
         <hr />
         <CompAvo />
       </p>

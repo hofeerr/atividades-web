@@ -16,7 +16,7 @@ const CompAvo = () => {
     return (
         <idContext.Provider value={contador}>
             <div>
-                <h4>Pokemon Avo!</h4>
+                <h4>Pokemon Vovô!</h4>
                 <img
                     src = { url + contador +".png" }
                     alt = "Pokemon"
@@ -25,7 +25,7 @@ const CompAvo = () => {
                 <CompFilho />
 
                 <br /><br />
-                <button onClick={incrmentaContador}>Incrementar</button>
+                <button onClick={incrmentaContador}>Próxima Geração</button>
 
             </div>
 
