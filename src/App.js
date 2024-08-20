@@ -1,8 +1,4 @@
 import './App.css';
-import FunctionContextA from './components/atvidade02/01questao/FunctionContextA';
-import ClassA from './components/atvidade02/01questao/ClassContext';
-import ComponenteAvo from './components/atvidade02/02Pokemon/ComponenteAvo';
-import CompAvo from './components/atvidade02/03Pokemon/CompAvo';
 
 function App() {
 
@@ -10,33 +6,18 @@ function App() {
 
     <div className='body'>
       <p className='questionWhite'>
-        <strong>Aluno:</strong> Mariana Hofer <br/>
-        <strong>Matrícula: </strong> 535809
+        <strong><h1>AP1 - Desenvolvimento Web 20/08</h1></strong><br/>
+        <strong>Aluno:</strong> Mariana Aparecida Hofer Gama <br/>
+        <strong>Matrícula: </strong> 535809 <br/>
+        <strong>Turma: </strong> T02
       
-      </p>
-
-      <p className='questionWhite'>
-        <h1 className='subHeader'>Questão 01</h1>
-        <h4 className='subHeader'>usando contexto para puxar backgroundColors, com Function C na versão atual e demais na legada</h4>
-        <hr />
-      </p>
-      <p className='question'>
-        <ClassA />
-        <FunctionContextA />
       </p>
         
       <p className='questionWhite'>
-        <h1 className='subHeader'>Questão 02 </h1>
-        <h4 className='subHeader'> "eu escolho você!" versão apenas contexto </h4>
+        <h1 className='subHeader'>Questão 01 </h1>
+        <h4 className='subHeader'>Cabeçalho</h4>
         <hr />
-        <ComponenteAvo />
-      </p>
-
-      <p className='questionWhite'>
-        <h1 className='subHeader'>Questão 3</h1>
-        <h4 className='subHeader'> "eu escolho você!" versão usando contador e buttom </h4>
-        <hr />
-        <CompAvo />
+        <h6>Resposta</h6>
       </p>
 
       
