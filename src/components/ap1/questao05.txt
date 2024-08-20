@@ -1,0 +1,69 @@
+ Explique como o uso de Contextos pode resolver o problema de PROPS DRILLING. Exemplo: 
+
+ No "Props Drilling" ou  problema de propagação de propriedades temos passados de um componente pai para um componente filho, e então passar esses dados para outro componente neto (componentes aninhados), e assim por diante... Gerndo assim uma passagem de propriedades por vários compontes que não precisam destas props imediatamente.
+
+ Como você pode ver no exemplo a seguir, os filhos diretos de App, como o Header, também precisam passar os dados do tema usando props... 
+
+export default function App({ theme }) {
+  return (
+    <>
+      <Header theme={theme} />
+      <Main theme={theme} />
+      <Sidebar theme={theme} />
+      <Footer theme={theme} />
+    </>
+  );
+}
+
+function Header({ theme }) {
+  return (
+    <>
+      <User theme={theme} />
+      <Login theme={theme} />
+      <Menu theme={theme} />
+    </>
+  );
+}
+ 
+ Com React, através da definição de um contexto (createContext()) e da passagem dele(Provider) qualquer componente na árvore pode consumir esse valor diretamente, sem precisar passar props manualmente. Além disso, melhora-se a legibilidade, manutenção do código, e reutilização de componentes.
+
+Retaforando o exemplo anterior teríamos mais ou menos isso:
+
+// ThemeContext.js
+import React, { createContext, useContext } from 'react';
+
+// Criação do Contexto
+const ThemeContext = createContext();
+
+// Exporta o Provider e um hook personalizado para consumir o contexto
+export const ThemeProvider = ({ children, theme }) => {
+  return (
+    <ThemeContext.Provider value={theme}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export const useTheme = () => {
+  return useContext(ThemeContext);
+};
+
+import React from 'react';
+import { ThemeProvider } from './ThemeContext'; // Importe o ThemeProvider
+import Header from './Header';
+import Main from './Main';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+
+const App = ({ theme }) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Header />
+      <Main />
+      <Sidebar />
+      <Footer />
+    </ThemeProvider>
+  );
+};
+
+export default App;
